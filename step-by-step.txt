@@ -1,0 +1,18 @@
+Steps to create an API:
+
+  Initialize Java project: 
+    1o - CTRL + SHIFT + P (Command pallet);
+    2o - Java overview;
+    3o - Create a Spring Boot project;
+    4o - Select the project manager (Maven or Gradle) - This one gonna be Maven;
+    5o - Choose the Spring Boot version: More recent but not snapshot or M1 (Tests versions);
+    6o - Specify project language (Not just Java) - This one gonna be Java;
+    7o - Specifie Group ID (Company name, Company domain, Site name) - es.com.empresaName (Not the same order as usually);
+    8o - Specifie Artifact ID - Project name(without space, just "_" or "-"); 
+    9o - Choose the extesion the project gonna do (Gonna build in JAR or WAR) - This one gonna be JAR 
+    10o - Choose the Java version of the project - This one gonna be 11;
+    11o - Choose dependencies to use - This one gonna use Spring Boot DevTools (like nodemon), Spring Web (to create API RESTful)
+    12o - Choose the folder to generate the project; 
+    13o - Choose to open or add-workspace
+    14o - If appears an option to import the project click on "Yes" to load and download all dependencies you have in your project. Wait until the service is ready;
+    15o -
