@@ -16,5 +16,22 @@ Steps to create an API:
     13o - Choose to open or add-workspace
     14o - If appears an option to import the project click on "Yes" to load and download all dependencies you have in your project. Wait until the service is ready;
   
-  API structure:
-    1o - 
+  API structure (inside src/main/java/com/first_api/first_api):
+    1o - Create the Model folder;
+    2o - Create the Controller folder;
+    3o - Create the Services fodler;
+    4o - Create the Repository folder;
+
+  Model structure (inside src/main/java/com/first_api/first_api/Model):
+    1o - Create new file (ex Product.java);
+    2o - Create the atributes for the model; 
+    3o - Separe the lines and create the getters and setters;
+    4o - Create a region with #region to organize and #endregion;
+
+  Repository structure (inside src/main/java/com/first_api/first_api/Repository):
+    1o - Create new file (ex ProductRepository.java);
+    2o - Connect with DB or simulate an DB; 
+      To simulate DB: 
+        1o - Upside the class name, put @Repository and import what is necessary; 
+        2o - Create the atributes
+        3o - Create the methods;
