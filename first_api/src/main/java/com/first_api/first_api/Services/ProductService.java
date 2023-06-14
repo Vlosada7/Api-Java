@@ -1,24 +1,27 @@
-package com.first_api.first_api.Repository;
+package com.first_api.first_api.Services;
 
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.stereotype.Repository;
-import com.first_api.first_api.Model.Product;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-@Repository
-public class ProductRepository {
-  private List<Product> products = new ArrayList<Product>(); 
-  private Integer lastId = 0;
+import com.first_api.first_api.Model.Product;
+import com.first_api.first_api.Repository.ProductRepository;
+
+@Service
+public class ProductService {
+
+  @Autowired
+  private ProductRepository productRepository;
 
   /**
    * Method to return an Products List
    * @return Products List
    */
   public List<Product> getAll() {
-    return products;
+    return productRepository.getAll();
   }
 
   /**
@@ -28,10 +31,7 @@ public class ProductRepository {
    */
   public Optional<Product> getId(int id) {
     //"Optional" will return the choosed product by ID or Null
-    return products
-        .stream()
-        .filter(product -> product.getId() == id)
-        .findFirst();
+    return productRepository.getId(id);
   }
 
   /**
@@ -40,10 +40,7 @@ public class ProductRepository {
    * @return Product added in the List
    */
   public Product add(Product product) {
-    lastId++;
-    product.setId(lastId);
-    products.add(product);
-    return product;
+    return productRepository.add(product);
   }
 
   //Worst way to do:
@@ -52,7 +49,7 @@ public class ProductRepository {
    * @param id Product id to remove
    */
   public void delete(int id) {
-    products.removeIf(product -> product.getId() == id);
+    productRepository.delete(id);
   }
 
   /**
@@ -60,17 +57,8 @@ public class ProductRepository {
    * @param product
    * @return the product updated
    */
-  public Product update(Product product) {
-    //Find the product:
-    Optional<Product> choosedProduct = getId(product.getId());
-
-    if (choosedProduct.isEmpty()) {
-      throw new InputMismatchException("Product not found");
-    }
-
-    delete(product.getId());
-    products.add(product); 
-    
-    return product;
+  public Product update(Integer id, Product product) {
+    product.setId(id);
+    return productRepository.update(product);
   }
 }
