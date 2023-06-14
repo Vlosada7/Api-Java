@@ -53,7 +53,8 @@ public class ProductService {
 
   /**
    * Method to update an product
-   * @param product
+   * @param product product to update
+   * @param id product Id to update
    * @return the product updated
    */
   public Product update(Integer id, Product product) {
