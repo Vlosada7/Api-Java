@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-FirstApiApplication<first_api>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.first_api.first_api.FirstApiApplication",
+      "projectName": "first_api",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

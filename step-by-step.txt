@@ -15,4 +15,6 @@ Steps to create an API:
     12o - Choose the folder to generate the project; 
     13o - Choose to open or add-workspace
     14o - If appears an option to import the project click on "Yes" to load and download all dependencies you have in your project. Wait until the service is ready;
-    15o -
+  
+  API structure:
+    1o - 
