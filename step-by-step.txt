@@ -45,3 +45,12 @@ Steps to create an API:
     3o - Instance the Repository and use @Autowired; 
     4o - Create the same methods from Repository;
     5o - Create any rule inside the methods if necessary (like auth or requirements for methods);
+
+  Controller structure (inside src/main/java/com/first_api/first_api/Controller):
+    1o - Create new file (ex ProductController.java);
+    2o - Upside the class name, put @RestController and import what is necessary;
+    3o - Choose the what route the Controller will listening (Below the @RestController put @RequestMapping("/api/products"));
+    4o - Instance the service at the begging ant put @Autowired;
+    5o - Create the methods;
+    6o - Before all the methods you have to put @GetMapping, @PostMapping, @PutMapping, @DeleteMapping
+   
