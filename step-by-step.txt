@@ -37,7 +37,10 @@ Steps to create an API:
         3o - Create the methods;
         4o - Create Javadocument comment in each method (/**);
       To connect with DB:
-        1o - 
+        * - Install the dependencies Spring Data JPA, Spring Data JDBC, postgresSQL Driver
+        1o - Create the DB in whatever db you want (ex postgresSQL/MongoDB) 
+        2o - Config the path to the DB in the src/main/resources/application.properties
+        3o - Update de properties of the product model and put @Entity upside the name
 
   Service structure (inside src/main/java/com/first_api/first_api/Service): 
     1o - Create new file (ex ProductService.java);
