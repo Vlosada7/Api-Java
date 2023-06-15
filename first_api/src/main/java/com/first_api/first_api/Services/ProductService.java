@@ -28,9 +28,9 @@ public class ProductService {
    * @param id productID to looking for
    * @return Product by ID or null 
    */
-  public Optional<Product> getId(int id) {
+  public Optional<Product> getById(int id) {
     //"Optional" will return the choosed product by ID or Null
-    return productRepository.getId(id);
+    return productRepository.getById(id);
   }
 
   /**

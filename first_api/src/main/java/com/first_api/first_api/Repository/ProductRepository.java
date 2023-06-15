@@ -26,7 +26,7 @@ public class ProductRepository {
    * @param id productID to looking for
    * @return Product by ID or null 
    */
-  public Optional<Product> getId(int id) {
+  public Optional<Product> getById(int id) {
     //"Optional" will return the choosed product by ID or Null
     return products
         .stream()
@@ -62,7 +62,7 @@ public class ProductRepository {
    */
   public Product update(Product product) {
     //Find the product:
-    Optional<Product> choosedProduct = getId(product.getId());
+    Optional<Product> choosedProduct = getById(product.getId());
 
     if (choosedProduct.isEmpty()) {
       throw new InputMismatchException("Product not found");
